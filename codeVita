@@ -1,1 +1,33 @@
 //Codevita 2013
+#include <stdio.h>
+
+int main()
+{
+    int len,i=0,max,Energy=0;
+    int seq[len];
+    
+    scanf("%d",&len);
+    do scanf("%d",&seq[i]);
+    while(seq[i]>0 && seq[i++]<199 && i<len);
+    
+    while(len!=1)
+    {
+        max=0;
+        for(i=0;i<len-1;i++)
+        if( (seq[i]*seq[i+1])%199 > (seq[max]*seq[max+1])%199  )
+        max=i;
+        
+        Energy=Energy+seq[max]*seq[max+1];
+        seq[max]=seq[max]*seq[max+1]%199;
+        
+        for(i=max+1;i<len-1;i++)
+        {
+            seq[i]=seq[i+1];
+            
+        }
+        seq[len--]=0;
+    }
+    printf("%dJ",Energy);
+    
+    return 0;
+}
