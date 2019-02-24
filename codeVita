@@ -8,7 +8,7 @@ int main()
     
     scanf("%d",&len);
     do scanf("%d",&seq[i]);
-    while(seq[i]>0 && seq[i++]<199 && i<len);
+    while(seq[i]>0 && seq[i]<199 && i--<len);
     
     while(len!=1)
     {
