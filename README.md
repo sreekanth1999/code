@@ -1,3 +1,3 @@
-# hello-world
+# coding practice
 my first repository
-experimenting with git. SO far so good.....
+
